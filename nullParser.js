@@ -4,4 +4,4 @@ function nullParser (param) {
   return param.startsWith('null') ? [null, param.slice(4)] : null
 }
 
-console.log(nullParser(process.argv[2]))
+module.exports = nullParser

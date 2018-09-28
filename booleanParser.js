@@ -5,4 +5,4 @@ function booleanParser (param) {
   return param.startsWith('true') ? [true, param.slice(4)] : [false, param.slice(5)]
 }
 
-console.log(booleanParser(process.argv[2]))
+module.exports = booleanParser

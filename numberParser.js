@@ -28,7 +28,7 @@ function numberParser (input) {
 }
 
 function checkForMinusSymbol (input) {
-  return input === '-' || false
+  return input === '-'
 }
 
 function verifyIntegerComponent (input) {
@@ -46,9 +46,10 @@ function checkExponentComponent (input) {
   return exponentRegExp.exec(input)
 }
 
-console.log(numberParser(process.argv[2]))
-// console.log(checkForMinusSymbol(process.argv[2]))
-// console.log(verifyIntegerComponent(process.argv[2]))
-// console.log(verifyFractionComponent(process.argv[2]))
-// console.log(verifyExponentComponent(process.argv[2]))
-// console.log(getRemainingString(process.argv[2], process.argv[3]))
+module.exports = {
+  numberParser,
+  checkForMinusSymbol,
+  verifyIntegerComponent,
+  checkFractionComponent,
+  checkExponentComponent
+}
